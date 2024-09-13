@@ -1,0 +1,67 @@
+@import '../../app.component.scss';
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em 2.3em;
+    font-family: "Poligrapher-regular";
+    color: var(--french-violet);
+    border-bottom: solid 1px var(--french-violet);
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+    font-size: 1.4em;
+
+    a{
+        text-decoration: none;
+        color: var(--french-violet);
+    }
+    a:hover{
+        color: var(--orange-red);
+    }
+}
+
+.circle{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    
+    .logo{
+        background: center/cover url(../../../assets/imgs/logo.png) no-repeat;
+        position: absolute;
+        margin-top: -4px;
+        margin-left: -1px;
+        width: 105px;
+        height: 105px;
+        border-radius: 50%;
+        transform: rotate(-26deg);
+    }
+    
+    .text{
+        animation: rotate-clockwise 14.5s linear infinite;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        // font-family: "Termina-lin"
+        font-size: 1em;
+        font-weight: 200;
+    }
+}
+
+
+@keyframes rotate-clockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
